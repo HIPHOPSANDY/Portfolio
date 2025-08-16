@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Santhoshkumar S – Full‑Stack Developer</title>
+  <meta name="description" content="Full‑Stack Developer – React.js, Spring Boot, Java, Azure, PostgreSQL, MongoDB. 4+ years experience building cloud-based apps." />
+  <meta property="og:title" content="Santhoshkumar S – Full‑Stack Developer" />
+  <meta property="og:description" content="React.js • Spring Boot • Java • Azure • PostgreSQL • MongoDB" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <style>
+    /* ====== Design Tokens ====== */
+    :root{
+      --bg: #0b1020; /* deep navy */
+      --card: #0f172a; /* slate-900 */
+      --muted: #94a3b8; /* slate-400 */
+      --text: #e2e8f0; /* slate-200 */
+      --accent: #22d3ee; /* cyan-400 */
+      --accent-2: #38bdf8; /* sky-400 */
+      --ring: rgba(56,189,248,.4);
+      --shadow: 0 10px 25px rgba(2,8,23,.35);
+      --radius: 18px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    }
+
+    * { box-sizing: border-box }
+    html,body { height: 100% }
+    body{
+      margin:0; padding:0; font-family: var(--sans);
+      background: radial-gradient(1200px 800px at 10% -10%, #0b2742 0%, transparent 60%),
+                  radial-gradient(900px 700px at 110% 10%, #102a43 0%, transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent-2); text-decoration: none }
+    a:hover { text-decoration: underline; text-underline-offset: 3px }
+
+    .container{ max-width: 1100px; margin: 0 auto; padding: 24px }
+    .grid{ display: grid; gap: 22px }
+
+    header.hero{
+      position: relative; border-radius: var(--radius);
+      padding: 28px; background: linear-gradient(180deg, rgba(56,189,248,.08), rgba(34,211,238,.04)), var(--card);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .hero h1{ font-size: clamp(28px, 3.2vw, 40px); margin: 2px 0 8px }
+    .hero p.meta{ color: var(--muted); margin: 0 0 12px }
+    .badges{ display:flex; flex-wrap: wrap; gap:8px; margin-top: 12px }
+    .badge{
+      padding: 6px 10px; border-radius: 999px; font-size: 12px; letter-spacing:.2px;
+      background: rgba(34,211,238,.08); border: 1px solid rgba(56,189,248,.25);
+    }
+
+    nav.tabs{ display:flex; gap:10px; flex-wrap: wrap; margin-top: 16px }
+    .tab{ padding:10px 12px; border-radius: 10px; background: #0b1730; border:1px solid #1f2a44; font-size: 14px }
+    .tab:hover{ border-color: var(--accent-2) }
+
+    section.card{
+      background: var(--card); border:1px solid #1f2a44; border-radius: var(--radius);
+      padding: 22px; box-shadow: var(--shadow);
+    }
+    section.card h2{ margin: 0 0 14px; font-size: clamp(20px, 2.2vw, 26px) }
+    .kvs{ display:grid; grid-template-columns: repeat(auto-fit,minmax(230px,1fr)); gap:12px }
+    .kv{ background: #0b1730; border:1px solid #1f2a44; padding:12px 14px; border-radius: 14px }
+    .kv small{ color: var(--muted); display:block }
+
+    .list{ display:grid; gap:14px }
+    .item{ background:#0b1730; border:1px solid #1f2a44; border-radius: 14px; padding:14px }
+    .item h3{ margin:0 0 4px; font-size: 18px }
+    .item .stack{ font-family: var(--mono); font-size: 12px; color: var(--muted) }
+    .item .bullets{ margin:8px 0 0; padding-left: 18px }
+
+    .skills{ display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:12px }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px; padding:8px 10px; margin:6px; border-radius:999px;
+      background:#0b1730; border:1px solid #1f2a44; font-size: 13px
+    }
+
+    .footer{ color: var(--muted); font-size: 13px; text-align: center; padding: 14px 0 40px }
+
+    .actions{ display:flex; gap:10px; flex-wrap: wrap; margin-top: 12px }
+    .btn{
+      display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; font-weight:600;
+      background: linear-gradient(180deg, rgba(34,211,238,.15), rgba(56,189,248,.08));
+      border:1px solid rgba(56,189,248,.5); color:#e6f9ff
+    }
+    .btn.secondary{ background: transparent; color: var(--text); border-color:#2a3a62 }
+
+    /* Print */
+    @media print{
+      body{ background:#fff; color:#111 }
+      header.hero, section.card{ box-shadow:none; border:1px solid #ddd; background:#fff }
+      .tab, .pill, .badge, .btn{ border-color:#ccc; background:#f8f8f8; color:#111 }
+      a{ color:#0366d6 }
+    }
+  </style>
+</head>
+<body>
+  <div class="container grid">
+
+    <!-- ====== HERO ====== -->
+    <header class="hero">
+      <div class="grid" style="grid-template-columns: 1fr; gap: 6px">
+        <h1>Santhoshkumar S</h1>
+        <p class="meta">Full‑Stack Developer • React.js • Spring Boot • Java • Azure • PostgreSQL • MongoDB</p>
+        <div class="badges">
+          <span class="badge">4+ Years Experience</span>
+          <span class="badge">Cloud‑based SaaS</span>
+          <span class="badge">CI/CD • GitHub Actions • Azure</span>
+        </div>
+        <div class="actions">
+          <!-- Update the href to your hosted PDF (GitHub release/raw or another URL) -->
+          <a class="btn" href="#resume" onclick="window.print();return false;" title="Print or Save as PDF">🖨️ Print / Save as PDF</a>
+          <a class="btn secondary" href="mailto:santhoshkumar24cs@gmail.com">✉️ Contact</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/santhosh-kumar-s-342688176/" target="_blank" rel="noreferrer">🔗 LinkedIn</a>
+          <a class="btn secondary" href="https://github.com/HIPHOPSANDY" target="_blank" rel="noreferrer">🐙 GitHub</a>
+        </div>
+        <nav class="tabs" aria-label="Sections">
+          <a class="tab" href="#about">About</a>
+          <a class="tab" href="#skills">Skills</a>
+          <a class="tab" href="#experience">Experience</a>
+          <a class="tab" href="#projects">Projects</a>
+          <a class="tab" href="#certs">Certifications</a>
+          <a class="tab" href="#education">Education</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ====== ABOUT ====== -->
+    <section id="about" class="card">
+      <h2>About</h2>
+      <div class="kvs">
+        <div class="kv"><small>Role</small><strong>Software Developer @ Agaram Technologies</strong></div>
+        <div class="kv"><small>Experience</small><strong>May 2021 – Present (4+ yrs)</strong></div>
+        <div class="kv"><small>Location</small><strong>India</strong></div>
+        <div class="kv"><small>Contact</small><strong>+91‑81900 85191 · santhoshkumar24cs@gmail.com</strong></div>
+      </div>
+      <p style="margin-top:10px">Full‑stack developer with hands‑on experience building scalable web applications and cloud‑ready services. Skilled across React, Spring Boot, REST APIs, PostgreSQL/MS SQL, deployments on Azure, and CI/CD automation. Passionate about developer experience, clean architecture, and delivering business value.</p>
+    </section>
+
+    <!-- ====== SKILLS ====== -->
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <div>
+        <div class="pill">Frontend: React.js, Redux, TypeScript, JavaScript (ES6+), HTML5, CSS3, Bootstrap</div>
+        <div class="pill">Backend: Java 8/21, Spring Boot, Spring MVC, JPA/Hibernate, REST APIs</div>
+        <div class="pill">Databases: PostgreSQL, Microsoft SQL Server, MongoDB</div>
+        <div class="pill">Cloud & DevOps: Azure App Service, Blob Storage, Tomcat, JBoss, CI/CD (GitHub Actions, Azure DevOps), JUnit, Flyway</div>
+        <div class="pill">Tools: VS Code, Spring Tool Suite (STS), Postman, FileZilla, Swagger/OpenAPI</div>
+        <div class="pill">Other: Multi‑tenant apps, JWT auth, ADS (Active Directory), HikariCP tuning, Reporting (OnlyOffice, Stimulsoft)</div>
+      </div>
+    </section>
+
+    <!-- ====== EXPERIENCE ====== -->
+    <section id="experience" class="card">
+      <h2>Experience</h2>
+      <div class="list">
+        <div class="item">
+          <h3>Agaram Technologies — Software Developer <span class="stack">May 2021 – Present</span></h3>
+          <ul class="bullets">
+            <li>Built multi‑tenant SaaS modules with React and Spring Boot; implemented JWT auth and role‑based access.</li>
+            <li>Improved DB stability/perf using Hikari connection pool and optimized queries (PostgreSQL/MS SQL).</li>
+            <li>Implemented reporting with OnlyOffice/Stimulsoft, file management, SMTP, FTP and versioning workflows.</li>
+            <li>Automated builds and deployments with GitHub Actions; configured Azure App Services, Tomcat, JBoss.</li>
+            <li>Led on‑prem migrations and customer go‑lives (HPCL R&D Bengaluru, NFC Hyderabad).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PROJECTS ====== -->
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <div class="list">
+        <div class="item">
+          <h3>Logilab ELN Lite <span class="stack">React • Spring Boot • PostgreSQL • Azure Blob</span></h3>
+          <p>Cloud ELN SaaS offering 30‑day trials for personal and organizational use; CI/CD via GitHub Actions and Azure deployment.</p>
+          <p><a href="https://logilabelnlite.azurewebsites.net" target="_blank" rel="noreferrer">Live</a></p>
+        </div>
+        <div class="item">
+          <h3>Logilab ELN <span class="stack">React • Spring Boot • PostgreSQL • MS SQL • MongoDB</span></h3>
+          <p>Paperless lab notebook, multi‑tenant, JWT security, resource‑based REST APIs; automated deployments with Tomcat/Azure.</p>
+          <p><a href="https://logilabeln.azurewebsites.net/" target="_blank" rel="noreferrer">Live</a></p>
+        </div>
+        <div class="item">
+          <h3>Logilab ELN HPCL <span class="stack">React • Spring MVC/JDBC • MS SQL</span></h3>
+          <p>Enterprise deployment for HPCL; integrated ADS authentication, on‑site support and data migration.</p>
+        </div>
+        <div class="item">
+          <h3>LIMS PORTAL (NFC) <span class="stack">React • Spring Boot • PostgreSQL • JBoss</span></h3>
+          <p>Portal to track samples and test reports via LIMS integration; supported client go‑live at NFC Hyderabad.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CERTIFICATIONS ====== -->
+    <section id="certs" class="card">
+      <h2>Certifications</h2>
+      <ul class="bullets">
+        <li>Microsoft Certified: Azure Fundamentals (AZ‑900)</li>
+        <li>Master Microservices with Spring Boot & Spring Cloud</li>
+        <li>Master Spring Boot 3 & Spring Framework 6 with Java</li>
+        <li>Build Full‑Stack React Native Apps with Node.js Backend</li>
+        <li>Learn Ionic 3 From Scratch · Bootstrap 4 · HTML & CSS Projects</li>
+      </ul>
+    </section>
+
+    <!-- ====== EDUCATION ====== -->
+    <section id="education" class="card">
+      <h2>Education</h2>
+      <div class="list">
+        <div class="item">
+          <h3>M.Sc., Computer Science — Periyar Arts & Science College, Cuddalore</h3>
+          <p class="stack">CGPA: 8.590</p>
+        </div>
+        <div class="item">
+          <h3>B.Sc., Computer Science — Periyar Arts & Science College, Cuddalore</h3>
+          <p class="stack">CGPA: 7.159</p>
+        </div>
+        <div class="item">
+          <h3>St. Joseph’s Hr Sec School, Cuddalore</h3>
+          <p class="stack">HSC: 64% • SSLC: 74%</p>
+        </div>
+      </div>
+    </section>
+
+    <p class="footer">© <span id="year"></span> Santhoshkumar S — Open to Full‑Stack/Cloud roles. Built with ❤️ using semantic HTML & CSS.</p>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- JSON‑LD Resume Snippet for better SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Santhoshkumar S",
+    "jobTitle": "Full-Stack Developer",
+    "email": "mailto:santhoshkumar24cs@gmail.com",
+    "telephone": "+91-8190085191",
+    "url": "https://github.com/HIPHOPSANDY",
+    "sameAs": [
+      "https://www.linkedin.com/in/santhosh-profile"
+    ],
+    "knowsAbout": [
+      "React.js", "Spring Boot", "Java", "PostgreSQL", "MongoDB", "Azure", "CI/CD", "Microservices"
+    ]
+  }
+  </script>
+</body>
+</html>
